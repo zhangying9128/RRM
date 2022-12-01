@@ -2,7 +2,7 @@
 ### Install fairseq from our repository
 Please use our modified fairseq.
 ```sh
-cd RRM/LocalJoint_RRM/fairseq/
+cd RRM/LocalJointRRM/fairseq/
 pip install --editable .
 cd ..
 ```
