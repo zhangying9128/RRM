@@ -8,7 +8,7 @@ cd ..
 ```
 
 ### Our trained models
-As we mentioned in our paper, we run 3 trials with random seeds. You can use the following LocalJoint+RRM models to directly reproduce our results.
+As we mentioned in our paper, we run 3 trials with random seeds. You can use the following LocalJoint+RRM models to reproduce our results.
 | Model |Trial| Link|
 |---|---|---|
 | LocalJoint+RRM(alpha=0.3)| 1 | [download (.pt)](https://drive.google.com/file/d/1maHFGaND2SQJuBU4gtucdGW4FRKnmrnt/view?usp=share_link) | 
@@ -36,6 +36,7 @@ You can also train LocalJoint+RRM by yourself. If you want to reproduce our resu
 
 ### Training
 You can train LocalJoint+RRM with the following script on a GPU.
+Please edit '--device-id ' based on your GPU environment.
 ```sh
 bash train_rrm.sh
 ```
