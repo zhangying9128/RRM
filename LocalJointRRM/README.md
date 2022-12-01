@@ -36,7 +36,7 @@ You can also train LocalJoint+RRM by yourself. If you want to reproduce our resu
 
 ### Training
 You can train LocalJoint+RRM with the following script on a GPU.
-Please edit '--device-id ' based on your GPU environment.
+Please edit '--device-id ' based on your GPU environment. And make sure the last checkpoint is used for constructing average checkpoint (if you want to reproduce our results).
 ```sh
 bash train_rrm.sh
 ```
