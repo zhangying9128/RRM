@@ -166,7 +166,7 @@ def get_parser(desc, default_task='translation'):
     parser = argparse.ArgumentParser(allow_abbrev=False)
     # fmt: off
     parser.add_argument('--RRM', action='store_true', help='use rrm')
-    parser.add_argument('--RRM-scale', default=1, help='referring to out scaling factor alpha in Eq. (3)')
+    parser.add_argument('--RRM-scale', default=1, help='referring to our scaling factor alpha in Eq. (3)')
 
     parser.add_argument('--no-progress-bar', action='store_true', help='disable progress bar')
     parser.add_argument('--log-interval', type=int, default=1000, metavar='N',
