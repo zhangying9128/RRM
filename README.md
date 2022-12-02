@@ -1,4 +1,4 @@
-# RRM
+# Repetition Reduction Module (RRM)
 This repository contains the source code for paper [Generic Mechanism for Reducing Repetitions in Encoder-Decoder Models](https://aclanthology.org/2021.ranlp-1.180).
 
 ## Getting Started
