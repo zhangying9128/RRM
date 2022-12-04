@@ -1,0 +1,1 @@
+Please put checkpoints to this file as "TransferTransfo_RRM_0.3_full/pytorch_model.bin"

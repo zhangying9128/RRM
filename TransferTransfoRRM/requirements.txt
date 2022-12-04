@@ -1,0 +1,5 @@
+pytorch-ignite
+tensorboardX==1.8
+tensorflow==2.0.0  # for tensorboardX
+nltk==3.4.5
+spacy==1.9.0
