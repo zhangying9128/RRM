@@ -16,6 +16,8 @@ git clone https://github.com/zhangying9128/RRM.git
 We used the source code of [Fonollosa et al., (2019)](https://github.com/jarfo/joint) to preprocess the IWSLT14 De-En dataset and train LocalJoint with RRM.
 Please check [LocalJointRRM](https://github.com/zhangying9128/RRM/tree/main/LocalJointRRM) for more details.
 
+We used the source code of [Wolf et al. (2019)](https://github.com/huggingface/transfer-learning-conv-ai) to preprocess the PERSONACHAT dataset and train TransferTransfo with RRM.
+Please check [TransferTransfoRRM](https://github.com/zhangying9128/RRM/tree/main/TransferTransfoRRM) for more details.
 
 ## Citation:
 Please cite as:
