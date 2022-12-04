@@ -23,7 +23,7 @@ As we mentioned in our paper, we run 3 trials with random seeds. You can use the
 
 ## Using the training script
 You can also train TransferTransfo+RRM by yourself. 
-The dataset, GPT2 model and tokenizer will be automatically download. 
+The dataset, GPT2 model, and tokenizer will be automatically download. 
 
 ### Training
 You can train TransferTransfo+RRM with the following script on a GPU.
