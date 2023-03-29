@@ -7,9 +7,9 @@ As we mentioned in our paper, we run 3 trials with random seeds. You can use the
 | LocalJoint+RRM(alpha=0.3)| 1 | [download (.pt)](https://drive.google.com/file/d/1maHFGaND2SQJuBU4gtucdGW4FRKnmrnt/view?usp=share_link) | 
 | LocalJoint+RRM(alpha=0.3)| 2 | [download (.pt)](https://drive.google.com/file/d/1uzzd1QHwURnS0RAA6lbGqnzH54vo-Uu9/view?usp=share_link) | 
 | LocalJoint+RRM(alpha=0.3)| 3 | [download (.pt)](https://drive.google.com/file/d/1rzzoyiDkrqH32fMa0_RQ9jJo3NEZinMH/view?usp=share_link) | 
-| Transformer+RRM(alpha=0.01)| 1 | [download (.pt)]() | 
-| Transformer+RRM(alpha=0.01)| 2 | [download (.pt)]() | 
-| Transformer+RRM(alpha=0.01)| 3 | [download (.pt)]() | 
+| Transformer+RRM(alpha=0.01)| 1 | [download (.pt)](https://drive.google.com/file/d/14fglU99TOXiX-3IR3YxRBqthJAwRatqJ/view?usp=share_link) | 
+| Transformer+RRM(alpha=0.01)| 2 | [download (.pt)](https://drive.google.com/file/d/1xmLf3TSe5EA4bpZfawJx10pmdY74kChK/view?usp=share_link) | 
+| Transformer+RRM(alpha=0.01)| 3 | [download (.pt)](https://drive.google.com/file/d/1HT78_x5NC3KvMV3riLEg0mOJuLw8LsdI/view?usp=share_link) | 
 
 
 ### Data Preprocessing
