@@ -25,14 +25,14 @@ bash preprocess.sh
 
 ### Training
 You can train Transformer+RRM with the following script on a GPU.
-Please edit '--device-id ' based on your GPU environment.
+Please edit `--device-id` based on your GPU environment.
 ```sh
 bash train_transformer_rrm.sh
 ```
 
 ### Evaluation
 You can evaluate the Repeat score of Transformer+RRM on the test set with the following script.
-Please edit 'MODEL_PATH' and 'CHECKPOINT' based on your setting.
+Please edit `MODEL_PATH` and `CHECKPOINT` based on your setting.
 ```sh
 bash eval_rrm.sh
 ```

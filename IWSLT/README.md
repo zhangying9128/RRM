@@ -35,7 +35,7 @@ You can also train LocalJoint+RRM by yourself. If you want to reproduce our resu
 
 ### Training
 You can train LocalJoint+RRM or Transformer+RRM with the following scripts on a GPU.
-Please edit '--device-id ' based on your GPU environment. And make sure the last checkpoint is used for LocalJoint+RRM to construct average checkpoint (if you want to reproduce our results).
+Please edit `--device-id` based on your GPU environment. And make sure the last checkpoint is used for LocalJoint+RRM to construct average checkpoint (if you want to reproduce our results).
 ```sh
 bash train_localjoint_rrm.sh
 ```
@@ -46,7 +46,7 @@ bash train_transformer_rrm.sh
 
 ### Evaluation
 You can evaluate the Repeat score of LocalJoint+RRM or Transformer+RRM on the test set with the following script.
-Please edit 'MODEL_PATH' and 'CHECKPOINT' based on your setting.
+Please edit `MODEL_PATH` and `CHECKPOINT` based on your setting.
 ```sh
 bash eval_rrm.sh
 ```
