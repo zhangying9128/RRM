@@ -1,5 +1,5 @@
 #!/bin/bash
-SAVE=experiments_iwslt/checkpoints_RRM/
+SAVE=experiments_iwslt/Localjoint_RRM/
 mkdir -p $SAVE
 fairseq-train \
   data-bin/iwslt14.joined-dictionary.de-en \
