@@ -25,7 +25,7 @@ We used the source code of [Fonollosa et al., (2019)](https://github.com/jarfo/j
 Please check [IWSLT](https://github.com/zhangying9128/RRM/tree/main/IWSLT) for more details.
 
 We used the source code of [Ott et al., (2019)](https://github.com/facebookresearch/fairseq/tree/main/examples/translation) to preprocess the WMT14 En-De dataset and train Transformer with RRM.
-Please check [IWSLT](https://github.com/zhangying9128/RRM/tree/main/WMT) for more details.
+Please check [WMT](https://github.com/zhangying9128/RRM/tree/main/WMT) for more details.
 
 We used the source code of [Wolf et al. (2019)](https://github.com/huggingface/transfer-learning-conv-ai) to preprocess the PERSONACHAT dataset and train TransferTransfo with RRM.
 Please check [TransferTransfoRRM](https://github.com/zhangying9128/RRM/tree/main/TransferTransfoRRM) for more details.
