@@ -41,7 +41,7 @@ bash train_localjoint_rrm.sh
 ```
 
 ```sh
-bash train_Transformer_rrm.sh
+bash train_transformer_rrm.sh
 ```
 
 ### Evaluation
