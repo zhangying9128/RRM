@@ -18,6 +18,10 @@ Download and preprocess the IWSLT'14 German to English dataset.
 # Dataset download and preparation
 bash prepare-iwslt14-31K.sh
 
+# Restore the segmentated target file
+prep=iwslt14.tokenized.31K.de-en
+sed -r 's/(@@ )|(@@ ?$)//g' $prep/test.en > $prep/test.en.detok
+
 # Dataset binarization:
 bash preprocess.sh
 ```
@@ -43,7 +47,7 @@ bash train_Transformer_rrm.sh
 ### Evaluation
 You can evaluate the Repeat score of LocalJoint+RRM or Transformer+RRM on the test set with the following script.
 Please edit 'MODEL_PATH' and 'CHECKPOINT' based on your setting.
-```
+```sh
 bash eval_rrm.sh
 ```
 

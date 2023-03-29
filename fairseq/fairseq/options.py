@@ -165,6 +165,7 @@ def get_parser(desc, default_task='translation'):
 
     parser = argparse.ArgumentParser(allow_abbrev=False)
     # fmt: off
+    #zhangying
     parser.add_argument('--RRM', action='store_true', help='use rrm')
     parser.add_argument('--RRM-scale', default=1, help='referring to our scaling factor alpha in Eq. (3)')
 
