@@ -1,11 +1,12 @@
 #!/bin/bash
 SAVE=experiments_iwslt/checkpoints_RRM/
 mkdir -p $SAVE
-python fairseq/train.py data-bin/iwslt14.joined-dictionary.de-en \
+fairseq-train \
+  data-bin/iwslt14.joined-dictionary.de-en \
   --source-lang de --target-lang en \
   --seed 1 \
   --share-all-embeddings \
-  --distributed-world-size 1 --device-id 3 \
+  --distributed-world-size 1 --device-id 0 \
   --user-dir models \
   --arch local_joint_attention_iwslt_de_en \
   --clip-norm 0 \

@@ -12,9 +12,17 @@ This repository contains the source code for paper [Generic Mechanism for Reduci
 git clone https://github.com/zhangying9128/RRM.git
 ```
 
+### Install fairseq from our repository
+Please use our modified fairseq.
+```sh
+cd RRM/fairseq/
+pip install --editable .
+cd ..
+```
+
 ### Reproduce RRM
-We used the source code of [Fonollosa et al., (2019)](https://github.com/jarfo/joint) to preprocess the IWSLT14 De-En dataset and train LocalJoint with RRM.
-Please check [LocalJointRRM](https://github.com/zhangying9128/RRM/tree/main/LocalJointRRM) for more details.
+We used the source code of [Fonollosa et al., (2019)](https://github.com/jarfo/joint) to preprocess the IWSLT14 De-En dataset and train LocalJoint or Transformer with RRM.
+Please check [IWSLT](https://github.com/zhangying9128/RRM/tree/main/IWSLT) for more details.
 
 We used the source code of [Wolf et al. (2019)](https://github.com/huggingface/transfer-learning-conv-ai) to preprocess the PERSONACHAT dataset and train TransferTransfo with RRM.
 Please check [TransferTransfoRRM](https://github.com/zhangying9128/RRM/tree/main/TransferTransfoRRM) for more details.

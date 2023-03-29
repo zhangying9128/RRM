@@ -171,17 +171,20 @@ class TransformerModel(FairseqEncoderDecoderModel):
             )
 
         encoder = cls.build_encoder(args, src_dict, encoder_embed_tokens)
-        decoder = cls.build_decoder(args, tgt_dict, decoder_embed_tokens)
+        #decoder = cls.build_decoder(args, tgt_dict, decoder_embed_tokens)
+        #zhangying
+        decoder = cls.build_decoder(args, src_dict, tgt_dict, decoder_embed_tokens)
         return TransformerModel(encoder, decoder)
 
     @classmethod
     def build_encoder(cls, args, src_dict, embed_tokens):
         return TransformerEncoder(args, src_dict, embed_tokens)
 
+    #def build_decoder(cls, args, tgt_dict, embed_tokens):
+    #zhangying
     @classmethod
-    def build_decoder(cls, args, tgt_dict, embed_tokens):
-        return TransformerDecoder(args, tgt_dict, embed_tokens)
-
+    def build_decoder(cls, args, src_dict, tgt_dict, embed_tokens):
+        return TransformerDecoder(args, src_dict, tgt_dict, embed_tokens)
 
 class TransformerEncoder(FairseqEncoder):
     """
@@ -320,8 +323,9 @@ class TransformerDecoder(FairseqIncrementalDecoder):
         no_encoder_attn (bool, optional): whether to attend to encoder outputs
             (default: False).
     """
-
-    def __init__(self, args, dictionary, embed_tokens, no_encoder_attn=False):
+    #zhangying
+    #def __init__(self, args, dictionary, embed_tokens, no_encoder_attn=False):
+    def __init__(self, args, src_dictionary, dictionary, embed_tokens, no_encoder_attn=False):
         super().__init__(dictionary)
         self.register_buffer('version', torch.Tensor([3]))
 
@@ -370,6 +374,11 @@ class TransformerDecoder(FairseqIncrementalDecoder):
             self.embed_out = nn.Parameter(torch.Tensor(len(dictionary), self.output_embed_dim))
             nn.init.normal_(self.embed_out, mean=0, std=self.output_embed_dim ** -0.5)
 
+        #zhangying
+        #referring to the weight matrix w_q in our Eq. (6)
+        self.generator_q = nn.Parameter(torch.Tensor(len(src_dictionary), self.output_embed_dim))
+        #nn.init.normal_(self.generator_q, mean=0, std=output_embed_dim ** -0.5)
+
         if args.decoder_normalize_before and not getattr(args, 'no_decoder_final_norm', False):
             self.layer_norm = LayerNorm(embed_dim)
         else:
@@ -391,6 +400,9 @@ class TransformerDecoder(FairseqIncrementalDecoder):
                 - a dictionary with any model-specific outputs
         """
         x, extra = self.extract_features(prev_output_tokens, encoder_out, incremental_state)
+        #zhangying
+        #referring to (W_q * ~z + b_q) in our Eq. (6)
+        pred_q = F.linear(x, self.generator_q)
         x = self.output_layer(x)
         return x, extra
 
@@ -450,7 +462,7 @@ class TransformerDecoder(FairseqIncrementalDecoder):
         if self.project_out_dim is not None:
             x = self.project_out_dim(x)
 
-        return x, {'attn': attn, 'inner_states': inner_states}
+        return x, {'attn': attn, 'inner_states': inner_states}, pred_q
 
     def output_layer(self, features, **kwargs):
         """Project features to the vocabulary size."""
