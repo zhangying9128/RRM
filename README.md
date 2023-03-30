@@ -30,7 +30,7 @@ We used the source code of [Ott et al., (2019)](https://github.com/facebookresea
 Please check [WMT](https://github.com/zhangying9128/RRM/tree/main/WMT) for more details.
 
 We used the source code of [Wolf et al. (2019)](https://github.com/huggingface/transfer-learning-conv-ai) to preprocess the PERSONACHAT dataset and train TransferTransfo with RRM.
-Please check [TransferTransfoRRM](https://github.com/zhangying9128/RRM/tree/main/TransferTransfoRRM) for more details.
+Please check [PERSONACHAT](https://github.com/zhangying9128/RRM/tree/main/PERSONACHAT) for more details.
 
 ## Citation:
 Please cite as:
