@@ -1,5 +1,5 @@
 # Repetition Reduction Module (RRM)
-This repository contains the source code for our paper [Generic Mechanism for Reducing Repetitions in Encoder-Decoder Models](https://aclanthology.org/2021.ranlp-1.180) which is accepted to the Journal of Natural Language Processing (JNLP 2023).
+This repository contains the source code for our paper [Generic Mechanism for Reducing Repetitions in Encoder-Decoder Models](https://aclanthology.org/2021.ranlp-1.180) which is accepted for the Journal of Natural Language Processing (JNLP 2023).
 
 Ying Zhang, Hidetaka Kamigaito, Tatsuya Aoki, Hiroya Takamura, and Manabu Okumura. “Generic Mechanism for Reducing Repetitions in Encoder-Decoder Models,” Journal of Natural Language Processing (JNLP 2023), Volume 30, Issue 2. (Early Access)
 
